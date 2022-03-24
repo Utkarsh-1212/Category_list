@@ -23,7 +23,7 @@ export class FormComponent implements OnInit {
   subcategory: any=[];
 
   onSelect(states:any){
-    this.subcategory =this.auth.subcategory().filter(e=> e.id == states.target.value);
+    this.subcategory =this.auth.subcategory().filter(e => e.id == states.target.value);
 
 
   }
