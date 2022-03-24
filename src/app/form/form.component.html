@@ -1,0 +1,35 @@
+<div class="container my-5 border border-dark p-5 rounded bg-light">
+  <h2>FILL CATEGORY DETAILS BELOW</h2>
+
+  <form  class="example-form" #f="ngForm" >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Category Name</mat-label>
+      <input #catg matInput placeholder="Ex. Woman" value="" name="catgname" required />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill">
+      <mat-label>Sub Category</mat-label>
+      <mat-select (change)="onSelect($event)" ngModel name="subcatgname" >
+        <mat-option *ngFor="let state of states" value={{state.id}}>
+          {{ state.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Sub Category</mat-label>
+      <mat-select ngModel name="subcatgname" >
+        <mat-option *ngFor="let cat of subcategory" >
+          {{cat.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br />
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Category Description</mat-label>
+      <textarea matInput placeholder="Ex. List of Clothes for..."></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" >Submit</button>
+  </form>
+</div>
