@@ -10,15 +10,15 @@ export class AuthService {
     return [
       {
         id: 1,
-        name: 'woman',
+        name: 'Woman',
       },
       {
         id: 2,
-        name: 'man',
+        name: 'Man',
       },
       {
         id: 3,
-        name: 'kids',
+        name: 'Kids',
       },
     ];
   }

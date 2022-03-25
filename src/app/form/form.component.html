@@ -9,9 +9,9 @@
     <br />
     <mat-form-field appearance="fill">
       <mat-label>Sub Category</mat-label>
-      <mat-select (change)="onSelect($event)" ngModel name="subcatgname" >
-        <mat-option *ngFor="let state of states" value={{state.id}}>
-          {{ state.name }}
+      <mat-select (selectionChange)="onSelect($event.value)" ngModel name="subcatgname" >
+        <mat-option *ngFor="let catg of categ" [value]="catg">
+          {{ catg }}
         </mat-option>
       </mat-select>
     </mat-form-field>
@@ -19,8 +19,8 @@
     <mat-form-field appearance="fill">
       <mat-label>Sub Category</mat-label>
       <mat-select ngModel name="subcatgname" >
-        <mat-option *ngFor="let cat of subcategory" >
-          {{cat.name}}
+        <mat-option *ngFor="let cat of subcateg" [value]="cat" >
+          {{cat}}
         </mat-option>
       </mat-select>
     </mat-form-field>
