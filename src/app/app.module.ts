@@ -10,16 +10,24 @@ import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+// import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FilterPipe } from './filter/filter.pipe';
+
+
 
 
 
 import { FormComponent } from './form/form.component';
+import { TableComponent } from './table/table.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent
+    FormComponent,
+    TableComponent,
+    FilterPipe
+
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,8 @@ import { FormComponent } from './form/form.component';
     ReactiveFormsModule,
     MatInputModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    // Ng2SearchPipeModule
 
   ],
   providers: [],
