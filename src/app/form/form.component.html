@@ -1,26 +1,42 @@
 <div class="container my-5 border border-dark p-5 rounded bg-light">
   <h2>FILL CATEGORY DETAILS BELOW</h2>
 
-  <form  class="example-form" #f="ngForm" >
+  <form class="example-form" #f="ngForm">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Category Name</mat-label>
-      <input #catg matInput placeholder="Ex. Woman" value="" name="catgname" required />
+      <input
+        #catg
+        matInput
+        placeholder="Ex. Woman"
+        value=""
+        name="catgname"
+        required
+        ngModel
+        name="text"
+        minlength="6"
+      />
+      <br />
+      <!-- <mat-hint>Name is Incorrect</mat-hint> -->
     </mat-form-field>
     <br />
     <mat-form-field appearance="fill">
       <mat-label>Sub Category</mat-label>
-      <mat-select (selectionChange)="onSelect($event.value)" ngModel name="subcatgname" >
+      <mat-select
+        (selectionChange)="onSelect($event.value)"
+        ngModel
+        name="subcatgname"
+      >
         <mat-option *ngFor="let catg of categ" [value]="catg">
           {{ catg }}
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <br>
+    <br />
     <mat-form-field appearance="fill">
       <mat-label>Sub Category</mat-label>
-      <mat-select ngModel name="subcatgname" >
-        <mat-option *ngFor="let cat of subcateg" [value]="cat" >
-          {{cat}}
+      <mat-select ngModel name="subcatgname">
+        <mat-option *ngFor="let cat of subcateg" [value]="cat">
+          {{ cat }}
         </mat-option>
       </mat-select>
     </mat-form-field>
@@ -30,6 +46,11 @@
       <mat-label>Category Description</mat-label>
       <textarea matInput placeholder="Ex. List of Clothes for..."></textarea>
     </mat-form-field>
-    <button mat-raised-button color="primary" type="submit" >Submit</button>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
   </form>
+
+  <!-- Adding Categories Section  -->
+  <div class="container text-center mt-20">
+    <button routerLink="/admin" mat-raised-button color="accent">Add New Category</button>
+  </div>
 </div>

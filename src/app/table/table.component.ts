@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  searchText!: string;
+  searchText: string = '';
   players: any[] = [
     { id: 1, name: 'Virat kohli', country: 'India'},
     { id: 2, name: "Glen Maxwell", country: 'Australia'},
