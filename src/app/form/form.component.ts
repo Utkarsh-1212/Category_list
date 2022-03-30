@@ -17,8 +17,8 @@ export class FormComponent implements OnInit {
   categ: any = [ 'Woman', 'Man', 'Kids'];
   subcateg: any =[];
   woman: any = ['Lehanga', 'Kurti', 'Sarees'];
-  man: any = ['Jackets', 'Shoes', 'Watches'];
-  kids: any = ['CLothes', 'toys', 'caps'];
+  man: any = ['Jackets', 'Shoes', 'Watches', 'Trousers'];
+  kids: any = ['Clothes', 'Toys', 'Caps'];
   ngOnInit() {
 
   }

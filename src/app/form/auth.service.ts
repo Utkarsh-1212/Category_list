@@ -26,19 +26,19 @@ export class AuthService {
     return [
       {
         id:1,
-        name:"lehanga"
+        name:"Lehanga"
       },
       {
         id:1,
-        name:"kurti"
+        name:"Kurti"
       },
       {
         id:2,
-        name:"shoes"
+        name:"Shoes"
       },
       {
         id:2,
-        name:"jackets"
+        name:"Jackets"
       }
     ]
   }
